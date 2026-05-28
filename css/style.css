@@ -1,0 +1,346 @@
+.main-banner {
+    position: relative;
+    width: 100%;
+    height: 60vh;
+    margin-top: var(--nav-height);
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.banner-img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    z-index: 1;
+    
+    animation: fadeBlur linear both;
+    animation-timeline: scroll(root);
+    animation-range: start 0% exit 60vh;
+}
+
+.banner-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(180deg, rgba(5, 5, 8, 0.4) 0%, rgba(5, 5, 8, 0.85) 100%);
+    z-index: 2;
+}
+
+.banner-content {
+    position: relative;
+    z-index: 3;
+    padding: 0 1.5rem;
+    max-width: 800px;
+}
+
+.banner-title {
+    font-size: 3rem;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    color: var(--sw-gold);
+    text-shadow: 0 0 20px rgba(255, 232, 31, 0.5);
+    margin-bottom: 1rem;
+    font-weight: 800;
+}
+
+.banner-subtitle {
+    font-size: 1.25rem;
+    color: var(--sw-text);
+    letter-spacing: 1px;
+    opacity: 0.9;
+}
+
+.home-cards-section {
+    padding: 4rem 2rem;
+    max-width: 1440px;
+    margin: 0 auto;
+}
+
+.cards-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+}
+
+.faction-card {
+    position: relative;
+    height: 420px;
+    border-radius: 12px;
+    overflow: hidden;
+    background: #0b0e17;
+    display: flex;
+    align-items: flex-end;
+    padding: 2rem;
+    transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.3s ease;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.card-bg-img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    transition: transform 0.6s ease, filter 0.4s ease;
+    filter: grayscale(30%) brightness(0.6);
+    z-index: 1;
+}
+
+.card-glow {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 2;
+    pointer-events: none;
+    transition: opacity 0.4s ease;
+    opacity: 0;
+}
+
+.card-info {
+    position: relative;
+    z-index: 3;
+    width: 100%;
+}
+
+.card-tag {
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-weight: 700;
+    display: block;
+    margin-bottom: 0.5rem;
+    transition: color 0.3s ease;
+}
+
+.card-title {
+    font-size: 1.75rem;
+    color: var(--sw-text);
+    margin-bottom: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.card-desc {
+    font-size: 0.95rem;
+    
+    margin-bottom: 1.5rem;
+    line-height: 1.5;
+}
+
+.card-btn {
+    display: inline-block;
+    text-decoration: none;
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    font-weight: 700;
+    padding: 0.75rem 1.5rem;
+    border-radius: 4px;
+    background: rgba(255, 255, 255, 0.05);
+    color: var(--sw-text);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    transition: all 0.3s ease;
+}
+
+.jedi-card .card-tag { color: #00b0ff; }
+.jedi-card:hover { border-color: rgba(0, 176, 255, 0.4); }
+.jedi-card .card-glow { background: radial-gradient(circle at bottom, rgba(0, 176, 255, 0.15), transparent 70%); }
+.jedi-card .card-btn:hover { background: #00b0ff; color: #000; box-shadow: 0 0 15px rgba(0, 176, 255, 0.5); border-color: #00b0ff; }
+
+.sith-card .card-tag { color: #e60b12; }
+.sith-card:hover { border-color: rgba(230, 11, 18, 0.4); }
+.sith-card .card-glow { background: radial-gradient(circle at bottom, rgba(230, 11, 18, 0.15), transparent 70%); }
+.sith-card .card-btn:hover { background: #e60b12; color: #fff; box-shadow: 0 0 15px rgba(230, 11, 18, 0.5); border-color: #e60b12; }
+
+.bounty-card .card-tag { color: var(--sw-gold); }
+.bounty-card:hover { border-color: rgba(255, 232, 31, 0.4); }
+.bounty-card .card-glow { background: radial-gradient(circle at bottom, rgba(255, 232, 31, 0.12), transparent 70%); }
+.bounty-card .card-btn:hover { background: var(--sw-gold); color: #000; box-shadow: 0 0 15px rgba(255, 232, 31, 0.5); border-color: var(--sw-gold); }
+
+.faction-card:hover {
+    transform: translateY(-5px);
+}
+
+.faction-card:hover .card-bg-img {
+    transform: scale(1.05);
+    filter: grayscale(0%) brightness(0.7);
+}
+
+.faction-card:hover .card-glow {
+    opacity: 1;
+}
+
+.story-section {
+    max-width: 1440px;
+    margin: 0 auto;
+    padding: 6rem 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 8rem;
+}
+
+.story-row {
+    display: flex;
+    align-items: center;
+    gap: 4rem;
+}
+
+.story-row.reverse-row {
+    flex-direction: row-reverse;
+}
+
+.story-image {
+    flex: 1;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.6);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.story-image img {
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.5s ease;
+}
+
+.story-image:hover img {
+    transform: scale(1.03);
+}
+
+.story-text {
+    flex: 1;
+}
+
+.story-tag {
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    color: var(--sw-gold);
+    font-weight: 700;
+    display: block;
+    margin-bottom: 0.75rem;
+}
+
+.story-title {
+    font-size: 2.5rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-weight: 800;
+    margin-bottom: 1.5rem;
+}
+
+.title-jedi {
+    color: #fff;
+    text-shadow: 0 0 15px rgba(0, 176, 255, 0.6);
+}
+
+.title-sith {
+    color: #fff;
+    text-shadow: 0 0 15px rgba(230, 11, 18, 0.6);
+}
+
+.story-desc {
+    font-size: 1.05rem;
+    line-height: 1.7;
+    color: var(--sw-text-muted);
+    margin-bottom: 2rem;
+}
+
+.story-link {
+    display: inline-block;
+    text-decoration: none;
+    color: var(--sw-text);
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-weight: 700;
+    border-bottom: 2px solid var(--sw-gold);
+    padding-bottom: 4px;
+    transition: color 0.3s ease, border-color 0.3s ease;
+}
+
+.story-link:hover {
+    color: var(--sw-gold);
+    border-color: #fff;
+}
+
+
+
+@media (max-width: 480px) {
+    .story-title { font-size: 1.75rem; }
+    .story-desc { font-size: 0.95rem; }
+}
+
+
+/*animação*/
+@keyframes fadeBlur {
+    to {
+        filter: blur(8px) brightness(0.4);
+        transform: scale(1.05);
+    }
+}
+
+/*responsivo*/
+@media (max-width: 1080px) {
+    .main-banner { height: 50vh; }
+    .banner-title { font-size: 2.5rem; }
+    .banner-subtitle { font-size: 1.1rem; }
+     .cards-container { grid-template-columns: repeat(2, 1fr); gap: 1.5rem; }
+     .story-section { gap: 6rem; padding: 4rem 2rem; }
+    .story-title { font-size: 2rem; }
+    .story-image img { height: 320px; }
+}
+
+@media (max-width: 720px) {
+    .main-banner { height: 45vh; }
+    .banner-title { font-size: 2rem; letter-spacing: 2px; }
+    .banner-subtitle { font-size: 1rem; }
+     .home-cards-section { padding: 3rem 1.5rem; }
+    .cards-container { grid-template-columns: 1fr; gap: 1.5rem; }
+    .faction-card { height: 380px; }
+     .story-row, .story-row.reverse-row {
+        flex-direction: column;
+        gap: 2rem;
+    }
+    .story-section { gap: 4rem; padding: 3rem 1.5rem; }
+    .story-image { width: 100%; }
+    .story-image img { height: 250px; }
+    .story-text { text-align: center; }
+}
+
+@media (max-width: 620px) {
+    .main-banner { height: 40vh; }
+    .banner-title { font-size: 1.8rem; }
+}
+
+@media (max-width: 512px) {
+    .main-banner { height: 35vh; }
+    .banner-title { font-size: 1.5rem; margin-bottom: 0.5rem; }
+    .banner-subtitle { font-size: 0.9rem; }
+}
+
+@media (max-width: 480px) {
+    .main-banner { height: 30vh; }
+    .banner-title { font-size: 1.35rem; }
+    .banner-subtitle { font-size: 0.85rem; }
+    .home-cards-section { padding: 2rem 1rem; }
+    .faction-card { height: 350px; padding: 1.5rem; }
+    .card-title { font-size: 1.5rem; }
+        .story-title { font-size: 1.75rem; }
+    .story-desc { font-size: 0.95rem; }
+}

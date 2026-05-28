@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+    <title>Star Wars - Galáxia Distante</title>
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <link rel="stylesheet" href="/css/navbar.css">
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+
+    <nav class="star-navbar">
+        <div class="nav-container">
+            
+            <div class="logo-area" id="logoClick">
+                <img src="/assets/img/Star_Wars_Logo..png" alt="Star Wars" class="logo-img">
+            </div>
+
+            <ul class="nav-links" id="navLinks">
+                <li><a href="#"><i data-lucide="house"></i> <span>Home</span></a></li>
+                <li><a href="#"><i data-lucide="info"></i> <span>Sobre</span></a></li>
+                <li><a href="#"><i data-lucide="shopping-bag"></i> <span>Brinquedos</span></a></li>
+                <li><a href="#"><i data-lucide="gem"></i> <span>Colecionadores</span></a></li>
+                <li><a href="#"><i data-lucide="newspaper"></i> <span>Notícias</span></a></li>
+                <li><a href="#"><i data-lucide="film"></i> <span>Filmes</span></a></li>
+                <li><a href="#"><i data-lucide="gamepad-2"></i> <span>Games</span></a></li>
+                <li><a href="#"><i data-lucide="message-square"></i> <span>Feedback</span></a></li>
+            </ul>
+
+            <div class="mobile-menu-btn" id="mobileBtn">
+                <i data-lucide="menu" id="menuIcon"></i>
+            </div>
+        </div>
+    </nav>
+
+    <header class="main-banner">
+    <div class="banner-overlay"></div>
+    <img src="assets/img/banner_main.jpg" alt="Star Wars Banner" class="banner-img">
+    <div class="banner-content">
+        <h1 class="banner-title">A Galáxia Está em Guerra</h1>
+        <p class="banner-subtitle">Escolha o seu lado da Força e explore o universo.</p>
+    </div>
+</header>
+<section class="home-cards-section">
+    <div class="cards-container">
+        
+        <div class="faction-card jedi-card">
+            <div class="card-bg-img" style="background-image: url('/assets/img/ordem_jedi.webp');"></div>
+            <div class="card-glow"></div>
+            <div class="card-info">
+                <span class="card-tag">O Caminho da Luz</span>
+                <h3 class="card-title">Ordem Jedi</h3>
+                <p class="card-desc">Explore os ensinamentos da Força, a história dos Guardiões da Paz e o templo de Coruscant.</p>
+                <a href="#" class="card-btn">Acessar Arquivos</a>
+            </div>
+        </div>
+
+        <div class="faction-card sith-card">
+            <div class="card-bg-img" style="background-image: url('/assets/img/imperio_sith.png');"></div>
+            <div class="card-glow"></div>
+            <div class="card-info">
+                <span class="card-tag">O Lado Sombrio</span>
+                <h3 class="card-title">Império Sith</h3>
+                <p class="card-desc">Domine o poder bruto, a paixão e os segredos milenares guardados nas profundezas de Exegol.</p>
+                <a href="#" class="card-btn">Abraçar o Poder</a>
+            </div>
+        </div>
+
+        <div class="faction-card bounty-card">
+            <div class="card-bg-img" style="background-image: url('/assets/img/bounty_hunter.webp');"></div>
+            <div class="card-glow"></div>
+            <div class="card-info">
+                <span class="card-tag">Submundo Galáctico</span>
+                <h3 class="card-title">Guilda de Caçadores</h3>
+                <p class="card-desc">Procura-se alvos vivos ou mortos. Acesse os pucks de rastreamento ativos. Este é o caminho.</p>
+                <a href="#" class="card-btn">Ver Contratos</a>
+            </div>
+        </div>
+
+    </div>
+</section>
+<section class="story-section">
+    
+    <div class="story-row">
+        <div class="story-image">
+            <img src="/assets/img/saga_skywalker.jpg" alt="Filmes Star Wars">
+        </div>
+        <div class="story-text text-right-glow">
+            <span class="story-tag">A Saga Skywalker</span>
+            <h2 class="story-title title-jedi">Filmes & Cronologia</h2>
+            <p class="story-desc">Reviva a maior ópera espacial do cinema. Desde a ascensão de Darth Vader até o despertar da nova geração de heróis, explore os detalhes de cada trilogia, spin-offs e animações que expandem a galáxia distante.</p>
+            <a href="#" class="story-link">Ver Linha do Tempo</a>
+        </div>
+    </div>
+
+    <div class="story-row reverse-row">
+        <div class="story-image">
+            <img src="/assets/img/the_complete_saga_lego.webp" alt="Games Star Wars">
+        </div>
+        <div class="story-text text-left-glow">
+            <span class="story-tag">Imersão Total</span>
+            <h2 class="story-title title-sith">Expansão Digital</h2>
+            <p class="story-desc">Entre no cockpit de uma X-Wing ou domine o combate com sabres de luz. Fique por dentro de todos os lançamentos do mundo dos games, desde os clássicos de computador até as experiências de última geração.</p>
+            <a href="#" class="story-link">Explorar Jogos</a>
+        </div>
+    </div>
+
+</section>
+
+    <script src="js/navbar.js"></script>
+</body>
+</html>

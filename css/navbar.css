@@ -1,0 +1,199 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --sw-black: #050508;
+    --sw-gold: #ffe81f;
+    --sw-gold-dim: #c1b018;
+    --sw-sith-red: #e60b12;
+    --sw-stars-glow: rgba(255, 232, 31, 0.15);
+    --sw-text: #e2e8f0;
+    --sw-text-muted: #94a3b8;
+    --nav-height: 80px;
+    --glass-bg: rgba(5, 5, 8, 0.85);
+}
+
+body {
+    background: radial-gradient(circle at 50% 20%, rgba(12, 15, 29, 0.85), rgba(5, 5, 8, 0.95));
+    background-image: url('/assets/img/body_fundo_dois.webp');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    background-blend-mode: multiply;
+    font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+    color: var(--sw-text);
+    min-height: 120vh;
+    overflow-x: hidden;
+}
+
+.star-navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    background: var(--glass-bg);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border-bottom: 2px solid rgba(255, 232, 31, 0.12);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.7);
+}
+
+.nav-container {
+    max-width: 1440px;
+    margin: 0 auto;
+    padding: 0 2rem;
+    height: var(--nav-height);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo-area {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    z-index: 1010;
+}
+
+.logo-img {
+    height: 48px;
+    width: auto;
+    object-fit: contain;
+    filter: drop-shadow(0 0 8px rgba(255, 232, 31, 0.5));
+    transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.logo-img:hover {
+    transform: scale(1.05) rotate(-1deg);
+}
+
+.nav-links {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    list-style: none;
+}
+
+.nav-links li a {
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    padding: 0.6rem 1.1rem;
+    color: var(--sw-text-muted);
+    transition: all 0.3s ease;
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.nav-links li a i {
+    width: 16px;
+    height: 16px;
+    stroke-width: 2;
+    transition: transform 0.3s ease;
+}
+
+.nav-links li a:hover {
+    color: var(--sw-gold);
+    background: var(--sw-stars-glow);
+    text-shadow: 0 0 10px rgba(255, 232, 31, 0.6);
+}
+
+.nav-links li a:hover i {
+    transform: translateY(-1px) scale(1.1);
+    color: var(--sw-gold);
+}
+
+.mobile-menu-btn {
+    display: none;
+    background: transparent;
+    border: 1px solid rgba(255, 232, 31, 0.3);
+    border-radius: 4px;
+    width: 42px;
+    height: 42px;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    z-index: 1010;
+}
+
+.mobile-menu-btn:hover {
+    border-color: var(--sw-gold);
+    background: var(--sw-stars-glow);
+    box-shadow: 0 0 10px var(--sw-stars-glow);
+}
+
+.mobile-menu-btn i {
+    color: var(--sw-gold);
+    width: 22px;
+    height: 22px;
+}
+
+
+@media (max-width: 1150px) {
+    .nav-links {
+        position: fixed;
+        top: 0;
+        right: 0;
+        width: 280px;
+        height: 100vh;
+        background: rgba(5, 5, 8, 0.98);
+        border-left: 2px solid var(--sw-gold);
+        flex-direction: column;
+        justify-content: center;
+        padding: 2rem;
+        gap: 1.5rem;
+        transform: translateX(100%);
+        transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+        box-shadow: -10px 0 30px rgba(0,0,0,0.8);
+    }
+
+    .nav-links.active {
+        transform: translateX(0);
+    }
+
+    .nav-links li {
+        width: 100%;
+    }
+
+    .nav-links li a {
+        font-size: 1rem;
+        padding: 1rem;
+        width: 100%;
+        border-bottom: 1px solid rgba(255,255,255,0.05);
+        border-radius: 0;
+    }
+
+    .mobile-menu-btn {
+        display: flex;
+    }
+}
+
+@media (max-width: 720px) {
+    .nav-container { padding: 0 1.5rem; }
+    .logo-img { height: 38px; }
+}
+
+@media (max-width: 620px) {
+    .nav-container { padding: 0 1.2rem; }
+    .content-place h2 { font-size: 1.6rem; }
+}
+
+@media (max-width: 512px) {
+    :root { var(--nav-height): 70px; }
+    .logo-img { height: 32px; }
+    .nav-links { width: 100%; }
+}
+
+@media (max-width: 480px) {
+    .nav-container { padding: 0 1rem; }
+    .card { padding: 1.5rem; }
+}
