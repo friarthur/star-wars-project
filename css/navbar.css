@@ -18,7 +18,7 @@
 
 body {
     background: radial-gradient(circle at 50% 20%, rgba(12, 15, 29, 0.85), rgba(5, 5, 8, 0.95));
-    background-image: url('/assets/img/body_fundo_dois.webp');
+    background-image: url('/assets/img/fundo_com_estrela.avif');
     background-repeat: no-repeat;
     background-size: cover;
     background-attachment: fixed;
