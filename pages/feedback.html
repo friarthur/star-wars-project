@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>StarWars | Sobre</title>
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <link rel="stylesheet" href="/css/navbar.css">
+    <link rel="stylesheet" href="/css/paginas/feedback.css">
+    <link rel="stylesheet" href="/css/footer.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="icon" type="image/png" href="/assets/img/death_star.avif">
+
+</head>
+<body>
+<nav class="star-navbar">
+        <div class="nav-container">
+            
+            <div class="logo-area" id="logoClick">
+                <img src="/assets/img/Star_Wars_Logo..png" alt="Star Wars" class="logo-img">
+            </div>
+
+            <ul class="nav-links" id="navLinks">
+                 <li><a href="/index.html"><i data-lucide="house"></i> <span>Home</span></a></li>
+                <li><a href="/pages/sobre.html"><i data-lucide="info"></i> <span>Sobre</span></a></li>
+                <li><a href="/pages/brinquedos.html"><i data-lucide="shopping-bag"></i> <span>Brinquedos</span></a></li>
+                <li><a href="/pages/colecionadores.html"><i data-lucide="gem"></i> <span>Colecionadores</span></a></li>
+                <li><a href="/pages/noticias.html"><i data-lucide="newspaper"></i> <span>Notícias</span></a></li>
+                <li><a href="/pages/filme.html"><i data-lucide="film"></i> <span>Filmes</span></a></li>
+                <li><a href="/pages/games.html"><i data-lucide="gamepad-2"></i> <span>Games</span></a></li>
+                <li><a href="/pages/feedback.html"><i data-lucide="message-square"></i> <span>Feedback</span></a></li>
+            </ul>
+
+            <div class="mobile-menu-btn" id="mobileBtn">
+                <i data-lucide="menu" id="menuIcon"></i>
+            </div>
+        </div>
+    </nav>
+
+<header class="feedback-banner">
+    <div class="feedback-banner-overlay"></div>
+    <img src="/assets/img/feedback/banner_star_wars.jpg" alt="Transmissão de Feedback Star Wars" class="feedback-banner-img">
+    <div class="feedback-banner-content">
+        <h1 class="feedback-banner-title">Canal de Feedback</h1>
+        <p class="feedback-banner-subtitle">Abra uma frequência de transmissão e envie suas sugestões para a nossa base.</p>
+    </div>
+</header>
+<section class="feedback-section">
+    <div class="feedback-container">
+        
+        <div class="feedback-form-box">
+            <div class="form-header">
+                <h2>Transmissão de Frequência</h2>
+                <p class="form-subtitle">Preencha os dados abaixo para enviar suas impressões à Resistência.</p>
+            </div>
+
+            <form id="star-feedback-form" onsubmit="return false;">
+                
+                <div class="form-group">
+                    <label for="form-name">Nome Completo</label>
+                    <input type="text" id="form-name" placeholder="Ex: Luke Skywalker">
+                </div>
+
+                <div class="form-group">
+                    <label for="form-email">E-mail de Contato</label>
+                    <input type="email" id="form-email" placeholder="Ex: luke@galaxtmail.com">
+                </div>
+
+                <div class="form-group">
+                    <label for="form-phone">Telefone / Holo-frequência</label>
+                    <input type="tel" id="form-phone" placeholder="Ex: (11) 99999-9999">
+                </div>
+
+                <div class="form-group-row">
+                    <div class="form-group-item">
+                        <label>Lado da Força de Preferência</label>
+                        <div class="radio-group">
+                            <label class="radio-label">
+                                <input type="radio" name="force-side" value="Luz">
+                                <span>Lado da Luz</span>
+                            </label>
+                            <label class="radio-label">
+                                <input type="radio" name="force-side" value="Sombrio">
+                                <span>Lado Sombrio</span>
+                            </label>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label>Quais páginas você mais gostou?</label>
+                    <div class="checkbox-grid">
+                        <label class="checkbox-label">
+                            <input type="checkbox" name="pages-liked" value="História">
+                            <span>História</span>
+                        </label>
+                        <label class="checkbox-label">
+                            <input type="checkbox" name="pages-liked" value="Brinquedos">
+                            <span>Brinquedos</span>
+                        </label>
+                        <label class="checkbox-label">
+                            <input type="checkbox" name="pages-liked" value="Colecionáveis">
+                            <span>Colecionáveis</span>
+                        </label>
+                        <label class="checkbox-label">
+                            <input type="checkbox" name="pages-liked" value="Games">
+                            <span>Games</span>
+                        </label>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="form-message">Mensagem / Relato da Missão</label>
+                    <textarea id="form-message" rows="6" placeholder="Escreva aqui seu feedback detalhado sobre o site..."></textarea>
+                </div>
+
+                <button type="submit" class="btn-submit-form">Enviar Transmissão</button>
+
+            </form>
+        </div>
+
+    </div>
+</section>
+    
+    <footer class="star-footer">
+    <div class="footer-container">
+        
+        <div class="footer-left">
+            <img src="/assets/img/Star_Wars_Logo..png" alt="Star Wars" class="footer-logo">
+        </div>
+
+        <div class="footer-center">
+            <h2 class="footer-quote">✨ Que a Força esteja com você ✨</h2>
+            
+            <div class="footer-socials">
+                <a href="https://www.instagram.com/starwars/"><i class="fab fa-instagram"></i></a>
+                <a href="https://www.youtube.com/user/starwars"><i class="fab fa-youtube"></i></a>
+                <a href="https://twitter.com/starwars"><i class="fab fa-x-twitter"></i></a>
+            </div>
+
+            <ul class="footer-nav">
+                <li><a href="/index.html">Home</a></li>
+                <li><a href="/pages/sobre.html">Sobre</a></li>
+                <li><a href="/pages/brinquedos.html">Brinquedos</a></li>
+                <li><a href="/pages/colecionadores.html">Colecionadores</a></li>
+                <li><a href="/pages/noticias.html">Notícias</a></li>
+                <li><a href="/pages/filme.html">Filmes</a></li>
+                <li><a href="/pages/games.html">Games</a></li>
+                <li><a href="/pages/feedback.html">Feedback</a></li>
+            </ul>
+        </div>
+
+        <div class="footer-right">
+            <img src="/assets/img/person_footer/sith.png" alt="Grogu Acenando" class="footer-grogu">
+        </div>
+
+    </div>
+    
+    <div class="footer-bottom">
+        <p>&copy; 2026 Star Wars Fan Project. Desenvolvido para fins acadêmicos.</p>
+    </div>
+</footer>
+
+    <script src="/js/navbar.js"></script>
+</body>
+</html>

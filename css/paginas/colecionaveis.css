@@ -1,0 +1,262 @@
+.collectors-banner {
+    position: relative;
+    width: 100%;
+    height: 45vh;
+    margin-top: var(--nav-height);
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.collectors-banner-img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    z-index: 1;
+    animation: collectorsFadeBlur linear both;
+    animation-timeline: scroll(root);
+    animation-range: start 0% exit 45vh;
+}
+
+.collectors-banner-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(180deg, rgba(5, 5, 8, 0.3) 0%, rgba(5, 5, 8, 0.9) 100%);
+    z-index: 2;
+}
+
+.collectors-banner-content {
+    position: relative;
+    z-index: 3;
+    padding: 0 1.5rem;
+    max-width: 800px;
+}
+
+.collectors-banner-title {
+    font-size: 3rem;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    color: var(--sw-gold);
+    text-shadow: 0 0 20px rgba(255, 232, 31, 0.5);
+    margin-bottom: 1rem;
+    font-weight: 800;
+}
+
+.collectors-banner-subtitle {
+    font-size: 1.2rem;
+    color: var(--sw-text);
+    letter-spacing: 1px;
+    opacity: 0.9;
+}
+.items-showcase {
+    max-width: 1440px;
+    margin: 0 auto;
+    padding: 6rem 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 8rem;
+}
+
+.item-row {
+    display: flex;
+    align-items: center;
+    gap: 5rem;
+}
+
+.item-row.row-reverse {
+    flex-direction: row-reverse;
+}
+
+.item-media {
+    flex: 1;
+}
+
+.item-frame {
+    position: relative;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 25px 50px rgba(0, 0, 0, 0.7);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.item-frame img {
+    width: 100%;
+    height: 420px;
+    object-fit: cover;
+    display: block;
+    filter: brightness(0.85);
+    transition: transform 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.item-frame:hover img {
+    transform: scale(1.03);
+    filter: brightness(1);
+}
+
+.item-glow-blue, .item-glow-green, .item-glow-gold {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    opacity: 0.15;
+    transition: opacity 0.4s ease;
+}
+
+.item-frame:hover .item-glow-blue { background: radial-gradient(circle at center, #00b0ff, transparent 70%); opacity: 0.3; }
+.item-frame:hover .item-glow-green { background: radial-gradient(circle at center, #00ff9d, transparent 70%); opacity: 0.3; }
+.item-frame:hover .item-glow-gold { background: radial-gradient(circle at center, var(--sw-gold), transparent 70%); opacity: 0.25; }
+
+.item-info {
+    flex: 1.2;
+}
+
+.item-serial {
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: var(--sw-gold-dim);
+    font-weight: 700;
+    display: block;
+    margin-bottom: 0.5rem;
+}
+
+.item-title {
+    font-size: 2.2rem;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    color: var(--sw-text);
+    margin-bottom: 1.5rem;
+}
+
+.item-text {
+    font-size: 1.05rem;
+    line-height: 1.8;
+    color: var(--sw-text-muted);
+    text-align: justify;
+}
+.history-collectors-section {
+    padding: 6rem 2rem;
+    max-width: 1440px;
+    margin: 0 auto;
+    border-top: 1px solid rgba(255, 232, 31, 0.08);
+}
+
+.history-collectors-container {
+    background: rgba(12, 15, 29, 0.3);
+    border: 1px solid rgba(255, 255, 255, 0.03);
+    border-radius: 12px;
+    padding: 4rem;
+    box-shadow: 0 30px 60px rgba(0, 0, 0, 0.4);
+}
+
+.history-collectors-header {
+    margin-bottom: 3rem;
+    text-align: center;
+}
+
+.history-collectors-tag {
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    color: var(--sw-gold);
+    font-weight: 700;
+    display: block;
+    margin-bottom: 0.5rem;
+}
+
+.history-collectors-title {
+    font-size: 2.2rem;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    color: var(--sw-text);
+}
+
+.history-collectors-body {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.history-collectors-text p {
+    font-size: 1.05rem;
+    line-height: 1.8;
+    color: var(--sw-text-muted);
+    margin-bottom: 2rem;
+    text-align: justify;
+}
+
+.history-blockquote {
+    border-left: 3px solid var(--sw-gold);
+    padding: 1rem 0 1rem 1.5rem;
+    margin: 2.5rem 0;
+    font-style: italic;
+    font-size: 1.3rem;
+    color: var(--sw-text);
+    font-weight: 500;
+    letter-spacing: 0.5px;
+    background: linear-gradient(90deg, rgba(255, 232, 31, 0.03) 0%, transparent 100%);
+}
+
+@keyframes collectorsFadeBlur {
+    to {
+        filter: blur(8px) brightness(0.4);
+        transform: scale(1.05);
+    }
+}
+
+@media (max-width: 1080px) {
+    .collectors-banner { height: 40vh; }
+    .collectors-banner-title { font-size: 2.5rem; }
+    .items-showcase { gap: 6rem; padding: 4rem 2rem; }
+    .item-row { gap: 3rem; }
+    .item-title { font-size: 1.8rem; }
+    .item-frame img { height: 340px; }
+    .history-collectors-container { padding: 3rem; }
+    .history-collectors-title { font-size: 1.8rem; }
+    .history-blockquote { font-size: 1.15rem; }
+}
+
+@media (max-width: 720px) {
+    .collectors-banner { height: 35vh; }
+    .collectors-banner-title { font-size: 2rem; }
+    .collectors-banner-subtitle { font-size: 1rem; }
+    .item-row, .item-row.row-reverse {
+        flex-direction: column;
+        gap: 2rem;
+    }
+    .items-showcase { gap: 5rem; padding: 4rem 1.5rem; }
+    .item-media { width: 100%; }
+    .item-frame img { height: 280px; }
+    .item-info { text-align: center; }
+    .history-collectors-section { padding: 4rem 1.5rem; }
+    .history-collectors-container { padding: 2rem 1.5rem; }
+    .history-collectors-title { font-size: 1.5rem; }
+}
+
+@media (max-width: 512px) {
+    .collectors-banner { height: 30vh; }
+    .collectors-banner-title { font-size: 1.6rem; }
+    .collectors-banner-subtitle { font-size: 0.9rem; }
+}
+
+@media (max-width: 480px) {
+    .collectors-banner-title { font-size: 1.4rem; }
+    .items-showcase { padding: 3rem 1rem; }
+    .item-title { font-size: 1.5rem; }
+    .item-text { font-size: 0.95rem; }
+    .history-collectors-section { padding: 3rem 1rem; }
+    .history-collectors-container { padding: 2rem 1rem; }
+    .history-collectors-title { font-size: 1.35rem; }
+    .history-collectors-text p { font-size: 0.95rem; line-height: 1.7; }
+    .history-blockquote { font-size: 1rem; padding-left: 1rem; }
+}
