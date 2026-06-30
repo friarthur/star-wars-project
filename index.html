@@ -5,9 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
     <title>Star Wars - Galáxia Distante</title>
     <script src="https://unpkg.com/lucide@latest"></script>
-    <link rel="stylesheet" href="css/navbar.css">
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/footer.css">
+    <link rel="stylesheet" href="../css/navbar.css">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/footer.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <link rel="icon" type="image/png" href="/assets/img/death_star.avif">
     
@@ -18,18 +18,18 @@
         <div class="nav-container">
             
             <div class="logo-area" id="logoClick">
-                <img src="assets/img/Star_Wars_Logo..png" alt="Star Wars" class="logo-img">
+                <img src="../assets/img/Star_Wars_Logo.png" alt="Star Wars" class="logo-img">
             </div>
 
             <ul class="nav-links" id="navLinks">
                  <li><a href="index.html"><i data-lucide="house"></i> <span>Home</span></a></li>
-                <li><a href="pages/sobre.html"><i data-lucide="info"></i> <span>Sobre</span></a></li>
-                <li><a href="pages/brinquedos.html"><i data-lucide="shopping-bag"></i> <span>Brinquedos</span></a></li>
-                <li><a href="pages/colecionadores.html"><i data-lucide="gem"></i> <span>Colecionadores</span></a></li>
-                <li><a href="pages/noticias.html"><i data-lucide="newspaper"></i> <span>Notícias</span></a></li>
-                <li><a href="pages/filme.html"><i data-lucide="film"></i> <span>Filmes</span></a></li>
-                <li><a href="pages/games.html"><i data-lucide="gamepad-2"></i> <span>Games</span></a></li>
-                <li><a href="pages/feedback.html"><i data-lucide="message-square"></i> <span>Feedback</span></a></li>
+                <li><a href="../pages/sobre.html"><i data-lucide="info"></i> <span>Sobre</span></a></li>
+                <li><a href="../pages/brinquedos.html"><i data-lucide="shopping-bag"></i> <span>Brinquedos</span></a></li>
+                <li><a href="../pages/colecionadores.html"><i data-lucide="gem"></i> <span>Colecionadores</span></a></li>
+                <li><a href="../pages/noticias.html"><i data-lucide="newspaper"></i> <span>Notícias</span></a></li>
+                <li><a href="../pages/filme.html"><i data-lucide="film"></i> <span>Filmes</span></a></li>
+                <li><a href="../pages/games.html"><i data-lucide="gamepad-2"></i> <span>Games</span></a></li>
+                <li><a href="../pages/feedback.html"><i data-lucide="message-square"></i> <span>Feedback</span></a></li>
             </ul>
 
             <div class="mobile-menu-btn" id="mobileBtn">
@@ -40,7 +40,7 @@
 
     <header class="main-banner">
     <div class="banner-overlay"></div>
-    <img src="assets/img/banner_main.jpg" alt="Star Wars Banner" class="banner-img">
+    <img src="../assets/img/banner_main.jpg" alt="Star Wars Banner" class="banner-img">
     <div class="banner-content">
         <h1 class="banner-title">A Galáxia Está em Guerra</h1>
         <p class="banner-subtitle">Escolha o seu lado da Força e explore o universo.</p>
@@ -50,45 +50,58 @@
     <div class="cards-container">
         
         <div class="faction-card jedi-card">
-            <div class="card-bg-img" style="background-image: url('/assets/img/ordem_jedi.webp');"></div>
+            <div class="card-bg-img jedi-bg"></div>
             <div class="card-glow"></div>
             <div class="card-info">
                 <span class="card-tag">O Caminho da Luz</span>
-                <h3 class="card-title">Ordem Jedi</h3>
+                <div class="card-title">Ordem Jedi</div>
                 <p class="card-desc">Explore os ensinamentos da Força, a história dos Guardiões da Paz e o templo de Coruscant.</p>
                 <a href="#" class="card-btn">Acessar Arquivos</a>
             </div>
         </div>
 
         <div class="faction-card sith-card">
-            <div class="card-bg-img" style="background-image: url('/assets/img/imperio_sith.png');"></div>
+            <div class="card-bg-img sith-bg"></div>
             <div class="card-glow"></div>
             <div class="card-info">
                 <span class="card-tag">O Lado Sombrio</span>
-                <h3 class="card-title">Império Sith</h3>
+                <div class="card-title">Império Sith</div>
                 <p class="card-desc">Domine o poder bruto, a paixão e os segredos milenares guardados nas profundezas de Exegol.</p>
                 <a href="#" class="card-btn">Abraçar o Poder</a>
             </div>
         </div>
 
         <div class="faction-card bounty-card">
-            <div class="card-bg-img" style="background-image: url('/assets/img/bounty_hunter.webp');"></div>
+            <div class="card-bg-img bounty-bg"></div>
             <div class="card-glow"></div>
             <div class="card-info">
                 <span class="card-tag">Submundo Galáctico</span>
-                <h3 class="card-title">Guilda de Caçadores</h3>
+                <div class="card-title">Guilda de Caçadores</div>
                 <p class="card-desc">Procura-se alvos vivos ou mortos. Acesse os pucks de rastreamento ativos. Este é o caminho.</p>
                 <a href="#" class="card-btn">Ver Contratos</a>
             </div>
         </div>
+        <article class="faction-card empire-card">
+    <div class="card-bg-img empire-bg"></div>
 
+    <div class="card-glow"></div>
+
+    <div class="card-info">
+        <span class="card-tag">Domínio Galáctico</span>
+        <h2 class="card-title">Império Galáctico</h2>
+        <p class="card-desc">
+            Conheça a ascensão do Império, sua frota de Star Destroyers, os Stormtroopers e o governo liderado pelo Imperador Palpatine.
+        </p>
+        <a href="#" class="card-btn">Explorar Império</a>
+    </div>
+</article>
     </div>
 </section>
 <section class="story-section">
     
     <div class="story-row">
         <div class="story-image">
-            <img src="assets/img/saga_skywalker.jpg" alt="Filmes Star Wars">
+            <img src="../assets/img/saga_skywalker.jpg" alt="Filmes da saga Skywalker Star Wars">
         </div>
         <div class="story-text text-right-glow">
             <span class="story-tag">A Saga Skywalker</span>
@@ -100,7 +113,7 @@
 
     <div class="story-row reverse-row">
         <div class="story-image">
-            <img src="/assets/img/the_complete_saga_lego.webp" alt="Games Star Wars">
+            <img src="../assets/img/the_complete_saga_lego.webp" alt="Games Star Wars">
         </div>
         <div class="story-text text-left-glow">
             <span class="story-tag">Imersão Total</span>
@@ -123,7 +136,7 @@
             
             <div class="product-card">
                 <div class="product-img-box">
-                    <img src="assets/img/brinquedos_colecionaveis/darth_vader.webp" alt="Action Figure Darth Vader">
+                    <img src="../assets/img/brinquedos_colecionaveis/darth_vader.webp" alt="Action Figure Darth Vader">
                 </div>
                 <div class="product-info">
                     <h3 class="product-name">Action Figure Darth Vader</h3>
@@ -134,7 +147,7 @@
 
             <div class="product-card">
                 <div class="product-img-box">
-                    <img src="assets/img/brinquedos_colecionaveis/lego_Jedi_Starfighte.webp" alt="LEGO Jedi Starfighter">
+                    <img src="../assets/img/brinquedos_colecionaveis/lego_jedi_starfigter.webp" alt="LEGO Jedi Starfighter">
                 </div>
                 <div class="product-info">
                     <h3 class="product-name">LEGO Jedi Starfighter</h3>
@@ -145,7 +158,7 @@
 
             <div class="product-card">
                 <div class="product-img-box">
-                    <img src="assets/img/brinquedos_colecionaveis/prod_xwing.webp" alt="Réplica Nave X-Wing">
+                    <img src="../assets/img/brinquedos_colecionaveis/prod_xwing_hd.webp" alt="Réplica Nave X-Wing">
                 </div>
                 <div class="product-info">
                     <h3 class="product-name">Réplica Caça X-Wing</h3>
@@ -156,7 +169,7 @@
 
             <div class="product-card">
                 <div class="product-img-box">
-                    <img src="assets/img/brinquedos_colecionaveis/prod_bobblehead.jpeg" alt="Funko Pop Mandalorian">
+                    <img src="../assets/img/brinquedos_colecionaveis/prod_bobblehead.jpeg" alt="Funko Pop Mandalorian">
                 </div>
                 <div class="product-info">
                     <h3 class="product-name">Bobble-Head Mandalorian</h3>
@@ -168,7 +181,7 @@
         </div>
 
         <div class="showcase-actions">
-            <a href="pages/brinquedos.html" class="btn-see-more">Ver Catálogo Completo</a>
+            <a href="../pages/brinquedos.html" class="btn-see-more">Ver Catálogo Completo</a>
         </div>
 
     </div>
@@ -185,7 +198,7 @@
             
             <article class="news-main-card">
                 <div class="news-img-box">
-                    <img src="assets/img/noticias/lucasfilm.webp" alt="Nova Trilogia">
+                    <img src="../assets/img/noticias/george_lucas_films.avif" alt="Nova Trilogia">
                 </div>
                 <div class="news-content">
                     <span class="news-category">Cinema</span>
@@ -198,7 +211,7 @@
                 
                 <article class="news-side-card">
                     <div class="news-img-box">
-                        <img src="assets/img/noticias/mandalorian.jpeg" alt="Novo Jogo">
+                        <img src="../assets/img/noticias/mandalorian.jpeg" alt="Novo Jogo">
                     </div>
                     <div class="news-content">
                         <span class="news-category">Games</span>
@@ -208,7 +221,7 @@
 
                 <article class="news-side-card">
                     <div class="news-img-box">
-                        <img src="assets/img/noticias/ahsoka.jpeg" alt="Nova Série">
+                        <img src="../assets/img/noticias/ahsoka.jpeg" alt="Nova Série">
                     </div>
                     <div class="news-content">
                         <span class="news-category">Streaming</span>
@@ -226,32 +239,50 @@
     <div class="footer-container">
         
         <div class="footer-left">
-            <img src="assets/img/Star_Wars_Logo..png" alt="Star Wars" class="footer-logo">
+            <img src="../assets/img/Star_Wars_Logo.png" alt="Star Wars" class="footer-logo">
         </div>
 
         <div class="footer-center">
             <h2 class="footer-quote">✨ Que a Força esteja com você ✨</h2>
             
-            <div class="footer-socials">
-                <a href="https://www.instagram.com/starwars/"><i class="fab fa-instagram"></i></a>
-                <a href="https://www.youtube.com/user/starwars"><i class="fab fa-youtube"></i></a>
-                <a href="https://twitter.com/starwars"><i class="fab fa-x-twitter"></i></a>
-            </div>
+           <nav class="footer-socials" aria-label="Redes sociais">
+    <ul>
+        <li>
+            <a href="https://www.instagram.com/starwars/" target="_blank" rel="noopener noreferrer">
+                <i class="fab fa-instagram"></i>
+            </a>
+        </li>
 
-            <ul class="footer-nav">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="pages/sobre.html">Sobre</a></li>
-                <li><a href="pages/brinquedos.html">Brinquedos</a></li>
-                <li><a href="pages/colecionadores.html">Colecionadores</a></li>
-                <li><a href="pages/noticias.html">Notícias</a></li>
-                <li><a href="pages/filme.html">Filmes</a></li>
-                <li><a href="pages/games.html">Games</a></li>
-                <li><a href="pages/feedback.html">Feedback</a></li>
-            </ul>
+        <li>
+            <a href="https://www.youtube.com/user/starwars" target="_blank" rel="noopener noreferrer">
+                <i class="fab fa-youtube"></i>
+            </a>
+        </li>
+
+        <li>
+            <a href="https://twitter.com/starwars" target="_blank" rel="noopener noreferrer">
+                <i class="fab fa-x-twitter"></i>
+            </a>
+        </li>
+    </ul>
+</nav>
+
+            <nav class="footer-nav">
+        <ul>
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="../pages/sobre.html">Sobre</a></li>
+            <li><a href="../pages/brinquedos.html">Brinquedos</a></li>
+            <li><a href="../pages/colecionadores.html">Colecionadores</a></li>
+            <li><a href="../pages/noticias.html">Notícias</a></li>
+            <li><a href="../pages/filme.html">Filmes</a></li>
+            <li><a href="../pages/games.html">Games</a></li>
+            <li><a href="../pages/feedback.html">Feedback</a></li>
+        </ul>
+    </nav>
         </div>
 
         <div class="footer-right">
-            <img src="assets/img/person_footer/baby_yoda.png" alt="Grogu Acenando" class="footer-grogu">
+            <img src="../assets/img/person_footer/baby_yoda.png" alt="Grogu Acenando" class="footer-grogu">
         </div>
 
     </div>
@@ -261,6 +292,6 @@
     </div>
 </footer>
 
-    <script src="js/navbar.js"></script>
+    <script src="../js/navbar.js"></script>
 </body>
 </html>

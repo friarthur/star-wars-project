@@ -207,6 +207,25 @@
     transform: translateY(-4px);
     border-color: rgba(255, 255, 255, 0.1);
 }
+.latest-news-title{
+    max-width:1440px;
+    margin:2rem auto;
+    padding:0 2rem;
+    text-align:center;
+}
+
+.latest-news-title h1{
+    font-size:2.3rem;
+    text-transform:uppercase;
+    color:var(--sw-gold);
+    margin-bottom:.5rem;
+    letter-spacing:2px;
+}
+
+.latest-news-title p{
+    color:var(--sw-text-muted);
+    font-size:1rem;
+}
 .deep-articles-section {
     padding: 4rem 2rem 6rem 2rem;
     max-width: 1440px;

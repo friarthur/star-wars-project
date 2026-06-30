@@ -144,7 +144,7 @@
     filter: grayscale(0%) brightness(0.95);
 }
 .movie-one-section {
-    padding: 6rem 2rem;
+    padding: 1rem 2rem;
     max-width: 1440px;
     margin: 0 auto;
     border-top: 1px solid rgba(255, 255, 255, 0.03);
@@ -357,7 +357,7 @@
     .origins-title { text-align: center; }
     .origins-tag { text-align: center; }
     .movie-one-container { flex-direction: column-reverse; gap: 3rem; }
-    .movie-one-section { padding: 4rem 1.5rem; }
+    .movie-one-section { padding: 1rem 1.5rem; }
     .movie-one-frame { width: 100%; }
     .movie-one-frame img { height: 300px; }
     .movie-one-title { text-align: center; }
@@ -378,7 +378,7 @@
     .origins-section { padding: 3rem 1rem; }
     .origins-title { font-size: 1.75rem; }
     .origins-text { font-size: 0.95rem; }
-    .movie-one-section { padding: 3rem 1rem; }
+    .movie-one-section { padding: 0.5rem 0.75rem; }
     .movie-one-title { font-size: 1.75rem; }
     .movie-one-text { font-size: 0.95rem; }
     .eras-section { padding: 3rem 1rem; }

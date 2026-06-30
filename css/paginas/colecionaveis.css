@@ -63,7 +63,7 @@
     padding: 6rem 2rem;
     display: flex;
     flex-direction: column;
-    gap: 8rem;
+    gap: 5rem;
 }
 
 .item-row {
@@ -146,7 +146,7 @@
     text-align: justify;
 }
 .history-collectors-section {
-    padding: 6rem 2rem;
+    padding: 3rem 2rem;
     max-width: 1440px;
     margin: 0 auto;
     border-top: 1px solid rgba(255, 232, 31, 0.08);
@@ -156,12 +156,12 @@
     background: rgba(12, 15, 29, 0.3);
     border: 1px solid rgba(255, 255, 255, 0.03);
     border-radius: 12px;
-    padding: 4rem;
+    padding: 1.5rem;
     box-shadow: 0 30px 60px rgba(0, 0, 0, 0.4);
 }
 
 .history-collectors-header {
-    margin-bottom: 3rem;
+    margin-bottom: 2rem;
     text-align: center;
 }
 
@@ -234,7 +234,7 @@
         flex-direction: column;
         gap: 2rem;
     }
-    .items-showcase { gap: 5rem; padding: 4rem 1.5rem; }
+    .items-showcase { gap: 5rem; padding: 5rem 1.5rem; object-fit: contain;}
     .item-media { width: 100%; }
     .item-frame img { height: 280px; }
     .item-info { text-align: center; }
@@ -247,11 +247,12 @@
     .collectors-banner { height: 30vh; }
     .collectors-banner-title { font-size: 1.6rem; }
     .collectors-banner-subtitle { font-size: 0.9rem; }
+    .items-showcase { padding: 0.5rem 1rem; }
 }
 
 @media (max-width: 480px) {
     .collectors-banner-title { font-size: 1.4rem; }
-    .items-showcase { padding: 3rem 1rem; }
+    .items-showcase { padding: 0.5rem 1rem; }
     .item-title { font-size: 1.5rem; }
     .item-text { font-size: 0.95rem; }
     .history-collectors-section { padding: 3rem 1rem; }

@@ -47,12 +47,16 @@
     margin-bottom: 1.5rem;
 }
 
-.footer-socials {
+.footer-socials ul {
     display: flex;
     gap: 1.5rem;
-    margin-bottom: 2rem;
+    list-style: none;
+    margin: 0 0 2rem 0;
+    padding: 0;
 }
-
+.footer-socials li {
+    list-style: none;
+}
 .footer-socials a {
     color: var(--sw-text-muted);
     transition: all 0.3s ease;
@@ -69,7 +73,7 @@
     height: 24px;
 }
 
-.footer-nav {
+.footer-nav ul {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;

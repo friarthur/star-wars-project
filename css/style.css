@@ -58,6 +58,7 @@
     letter-spacing: 1px;
     opacity: 0.9;
 }
+/*melhorar*/
 
 .home-cards-section {
     padding: 4rem 2rem;
@@ -67,8 +68,8 @@
 
 .cards-container {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 2rem;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1.5rem;
 }
 
 .faction-card {
@@ -95,8 +96,31 @@
     transition: transform 0.6s ease, filter 0.4s ease;
     filter: grayscale(30%) brightness(0.6);
     z-index: 1;
+    
+}
+.jedi-bg{
+    background-image:url("../assets/img/ordem_jedi.webp");
 }
 
+.sith-bg{
+    background-image:url("../assets/img/imperio_sith.png");
+}
+
+.bounty-bg{
+    background-image:url("../assets/img/bounty_hunter.webp");
+}
+.empire-bg{
+    background-image: url("../assets/img/star-wars-empire.jpg");
+    
+}
+.card-title{
+    font-size: 1.75rem;
+    color: var(--sw-text);
+    margin-bottom: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: bold;
+}
 .card-glow {
     position: absolute;
     top: 0;
@@ -131,6 +155,7 @@
     margin-bottom: 0.75rem;
     text-transform: uppercase;
     letter-spacing: 1px;
+    font-weight: bold;
 }
 
 .card-desc {
@@ -169,7 +194,27 @@
 .bounty-card:hover { border-color: rgba(255, 232, 31, 0.4); }
 .bounty-card .card-glow { background: radial-gradient(circle at bottom, rgba(255, 232, 31, 0.12), transparent 70%); }
 .bounty-card .card-btn:hover { background: var(--sw-gold); color: #000; box-shadow: 0 0 15px rgba(255, 232, 31, 0.5); border-color: var(--sw-gold); }
+.empire-card .card-tag{
+    color: #b0b7c3;
+}
 
+.empire-card:hover{
+    border-color: rgba(176, 183, 195, 0.5);
+}
+
+.empire-card .card-glow{
+    background: radial-gradient(circle at bottom,
+        rgba(176,183,195,.18),
+        transparent 70%);
+}
+
+.empire-card .card-btn:hover{
+    background:#9cabc5;
+    color:#000;
+    box-shadow:0 0 15px rgba(176,183,195,.5);
+    border-color:#b0b7c3;
+    object-fit: fill;
+}
 .faction-card:hover {
     transform: translateY(-5px);
 }
@@ -208,6 +253,7 @@
     overflow: hidden;
     box-shadow: 0 20px 40px rgba(0, 0, 0, 0.6);
     border: 1px solid rgba(255, 255, 255, 0.05);
+    object-fit:contain;
 }
 
 .story-image img {
@@ -216,6 +262,7 @@
     object-fit: cover;
     display: block;
     transition: transform 0.5s ease;
+    object-fit:contain;
 }
 
 .story-image:hover img {
@@ -333,9 +380,10 @@
 
 .product-img-box {
     width: 100%;
-    height: 280px;
+    height: 290px;    
     overflow: hidden;
     background: #000;
+    
 }
 
 .product-img-box img {
@@ -343,6 +391,8 @@
     height: 100%;
     object-fit: cover;
     transition: transform 0.4s ease;
+    object-fit:contain;
+    margin-top:15px;
 }
 
 .product-info {
@@ -477,7 +527,7 @@
 .news-img-box img {
     width: 100%;
     height: 100%;
-    object-fit: cover;
+    object-fit:contain;
     transition: transform 0.4s ease;
 }
 
@@ -566,7 +616,13 @@
     .news-grid { grid-template-columns: 1fr; }
     .news-main-card .news-img-box { height: 320px; }
 }
+@media (max-width:1000px){
 
+    .cards-container{
+        grid-template-columns:repeat(2,1fr);
+    }
+
+}
 @media (max-width: 720px) {
     .main-banner { height: 45vh; }
     .banner-title { font-size: 2rem; letter-spacing: 2px; }

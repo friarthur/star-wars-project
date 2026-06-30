@@ -110,6 +110,10 @@
     gap: 3rem 2rem;
     margin-bottom: 5rem;
 }
+.centralize-grid {
+    grid-template-columns: repeat(2, minmax(300px, 380px));
+    justify-content: center;
+}
 
 .movie-card {
     background: rgba(12, 15, 29, 0.4);
