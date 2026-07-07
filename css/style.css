@@ -19,11 +19,9 @@
     object-fit: cover;
     object-position: center;
     z-index: 1;
-    
-    animation: fadeBlur linear both;
-    animation-timeline: scroll(root);
-    animation-range: start 0% exit 60vh;
+     transition: filter 0.1s linear, opacity 0.1s linear, transform 0.1s linear;
 }
+
 
 .banner-overlay {
     position: absolute;
@@ -590,14 +588,13 @@
 
 
 
-
-/*animação*/
 @keyframes fadeBlur {
     to {
         filter: blur(8px) brightness(0.4);
         transform: scale(1.05);
     }
 }
+
 
 /*responsivo*/
 @media (max-width: 1150px) {
