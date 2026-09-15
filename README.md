@@ -61,3 +61,5 @@ O projeto cumpre rigorosamente os requisitos comportamentais através de scripts
 3. Abra o arquivo `index.html` em qualquer navegador web moderno (Chrome, Edge, Firefox, Safari).
 4. Para uma experiência completa de animação nos banners, recomenda-se rolar a página verticalmente.
 5. teste1
+6. teste 2 pull requeste
+7. 
