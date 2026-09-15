@@ -1,4 +1,4 @@
-# 🌌 Projeto Star Wars - Portal Galáctico (Trabalho Acadêmico)
+#  Projeto Star Wars - Portal Galáctico (Trabalho Acadêmico)
 
 > "Que a Força esteja com este código." Portal web completo e responsivo desenvolvido como projeto prático para a disciplina de Desenvolvimento Web.
 
@@ -60,3 +60,4 @@ O projeto cumpre rigorosamente os requisitos comportamentais através de scripts
 2. Certifique-se de manter a estrutura de pastas do projeto (`/assets/css/`, `/assets/js/`, `/assets/img/`).
 3. Abra o arquivo `index.html` em qualquer navegador web moderno (Chrome, Edge, Firefox, Safari).
 4. Para uma experiência completa de animação nos banners, recomenda-se rolar a página verticalmente.
+5. teste1
